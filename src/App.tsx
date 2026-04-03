@@ -3,6 +3,7 @@ import { FaChevronDown, FaSearch } from "react-icons/fa";
 import TodayForecastCard from "./components/TodayForecastCard";
 import StatCard from "./components/StatCard";
 import DailyForecastCard from "./components/DailyForecastCard";
+import HourlyForecastCard from "./components/HourlyForecastCard";
 
 const App = () => {
   return (
@@ -93,8 +94,28 @@ const App = () => {
               />
             </div>
           </div>
-          {/* Hourly Forecase Section */}
-          <div className="flex-3"></div>
+          {/* Hourly Forecast Section */}
+          <div className="flex-3">
+            <div className="max-h-210 p-8 bg-[#25253F] rounded-2xl">
+              <div className="flex items-center">
+                <h1 className="text-2xl font-medium">Hourly forecast</h1>
+                <button className="bg-[#3D3B5D] flex items-center gap-2 ml-auto justify-center px-4 py-2 rounded-xl">
+                  <h3 className="text-xl">Friday</h3>
+                  <FaChevronDown />
+                </button>
+              </div>
+              <div className="max-h-175 flex flex-1 flex-col gap-5 mt-5 overflow-y-auto">
+                {Array.from({ length: 24 }).map((_, index) => (
+                  <HourlyForecastCard
+                    key={index}
+                    iconImg="/icon-sunny.webp"
+                    time="3 PM"
+                    degree={20}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
