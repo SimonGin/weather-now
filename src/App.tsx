@@ -1,5 +1,6 @@
 import { IoSettingsOutline } from "react-icons/io5";
 import { FaChevronDown, FaSearch } from "react-icons/fa";
+import TodayForecastCard from "./components/TodayForecast";
 
 const App = () => {
   return (
@@ -16,7 +17,7 @@ const App = () => {
         <h1 className="text-6xl font-bold text-center my-10">
           How's the sky looking today?
         </h1>
-        <div className="flex justify-center gap-4">
+        <div className="flex justify-center gap-4 my-10">
           {/* Search Bar */}
           <div className="flex flex-row items-center gap-3 w-2xl bg-gray-700 px-4 py-3 rounded-xl">
             <FaSearch />
@@ -26,9 +27,21 @@ const App = () => {
               placeholder="Search for a place..."
             />
           </div>
-          <button className="bg-blue-600 px-4 py-3 rounded-xl font-medium ">
+          <button className="bg-[#4757DA] px-4 py-3 rounded-xl font-medium ">
             Search
           </button>
+        </div>
+        {/* Body */}
+        <div className="flex gap-10">
+          <div className="flex-6">
+            <TodayForecastCard
+              degree={24}
+              location="Saigon, Vietnam"
+              dmy="Friday, Apr 3, 2026"
+            />
+          </div>
+          {/* Hourly Forecase Section */}
+          <div className="flex-3"></div>
         </div>
       </div>
     </div>
