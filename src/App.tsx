@@ -2,6 +2,7 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { FaChevronDown, FaSearch } from "react-icons/fa";
 import TodayForecastCard from "./components/TodayForecastCard";
 import StatCard from "./components/StatCard";
+import DailyForecastCard from "./components/DailyForecastCard";
 
 const App = () => {
   return (
@@ -45,6 +46,51 @@ const App = () => {
               <StatCard title="Humidity" value="46%" />
               <StatCard title="Wind" value="14 km/h" />
               <StatCard title="Precipitation" value="0 mm" />
+            </div>
+            <h1 className="my-3 text-2xl font-medium">Daily forecast</h1>
+            <div className="grid grid-flow-col grid-cols-7 gap-5 my-5">
+              <DailyForecastCard
+                day="Thu"
+                iconImg="/icon-rain.webp"
+                high={24}
+                low={20}
+              />
+              <DailyForecastCard
+                day="Fri"
+                iconImg="/icon-overcast.webp"
+                high={24}
+                low={20}
+              />
+              <DailyForecastCard
+                day="Sat"
+                iconImg="/icon-snow.webp"
+                high={24}
+                low={20}
+              />
+              <DailyForecastCard
+                day="Sun"
+                iconImg="/icon-storm.webp"
+                high={24}
+                low={20}
+              />
+              <DailyForecastCard
+                day="Mon"
+                iconImg="/icon-overcast.webp"
+                high={24}
+                low={20}
+              />
+              <DailyForecastCard
+                day="Tue"
+                iconImg="/icon-sunny.webp"
+                high={24}
+                low={20}
+              />
+              <DailyForecastCard
+                day="Wed"
+                iconImg="/icon-partly-cloudy.webp"
+                high={24}
+                low={20}
+              />
             </div>
           </div>
           {/* Hourly Forecase Section */}
