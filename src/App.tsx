@@ -1,10 +1,11 @@
 import { IoSettingsOutline } from "react-icons/io5";
 import { FaChevronDown, FaSearch } from "react-icons/fa";
-import TodayForecastCard from "./components/TodayForecast";
+import TodayForecastCard from "./components/TodayForecastCard";
+import StatCard from "./components/StatCard";
 
 const App = () => {
   return (
-    <div className="bg-[#02012B] h-screen p-20 text-white">
+    <div className="bg-[#02012B] h-full p-20 text-white">
       <div>
         <div className="flex flex-row justify-between">
           <img src="logo.svg" alt="" />
@@ -39,6 +40,12 @@ const App = () => {
               location="Saigon, Vietnam"
               dmy="Friday, Apr 3, 2026"
             />
+            <div className="grid grid-flow-col grid-cols-4 gap-8 my-10">
+              <StatCard title="Feels like" value="24°" />
+              <StatCard title="Humidity" value="46%" />
+              <StatCard title="Wind" value="14 km/h" />
+              <StatCard title="Precipitation" value="0 mm" />
+            </div>
           </div>
           {/* Hourly Forecase Section */}
           <div className="flex-3"></div>
